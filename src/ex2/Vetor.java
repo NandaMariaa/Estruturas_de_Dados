@@ -76,5 +76,64 @@ public class Vetor {
         return -1;
     }
 
-    
+
+    //aula 3 .........
+
+    public boolean adicionaInicio (int posicao, String elemento) throws Exception {
+        this.aumentaCapacidade();
+        if (posicao >= 0 && posicao < tamanho) {
+            for (int i = this.tamanho -1; i >= posicao; i--) {
+                this.elementos[i + 1] = this.elementos[i];
+            }
+            this.elementos[posicao] = elemento;
+            this.tamanho++;
+
+        } else {
+            throw new Exception("Posição Invalida ");
+        }
+        return true;
+    }
+
+    public void aumentaCapacidade () {
+        if (this.tamanho == this.elementos.length) {
+            String [] elementosNovos = new String[this.elementos.length * 2];
+            for (int i = 0; i < this.elementos.length; i++) {
+                elementosNovos[i] = this.elementos[i];
+            }
+            this.elementos = elementosNovos;
+        }
+    }
+
+    public void adiciona1 (String elemento) throws Exception {
+        this.aumentaCapacidade();
+        this.elementos[this.tamanho] = elemento;
+        this.tamanho++;
+    }
+
+    public void remove (int posicao) throws Exception {
+        if (posicao >=0 && posicao <tamanho) {
+            for (int i = posicao; i < this.tamanho-1; i++) {
+                this.elementos[i] = this.elementos[i+1];
+            }
+            this.elementos[tamanho] = null;
+            this.tamanho--;
+        } else {
+            throw new Exception("Posição inválida");
+        }
+    }
+
+    public void remove2 (int posicao) throws Exception {
+        
+        if (posicao >=0 && posicao <tamanho) {
+            for (int i = posicao; i < this.tamanho-1; i++) {
+                this.elementos[i] = this.elementos[i+1];
+            }
+            this.elementos[tamanho] = null;
+            this.tamanho--;
+        } else {
+            throw new Exception("Posição inválida");
+        }
+    }
+
+
 }
