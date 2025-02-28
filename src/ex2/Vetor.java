@@ -122,17 +122,8 @@ public class Vetor {
         }
     }
 
-    public void remove2 (int posicao) throws Exception {
+    public void remove2 (int elemento) throws Exception {
         
-        if (posicao >=0 && posicao <tamanho) {
-            for (int i = posicao; i < this.tamanho-1; i++) {
-                this.elementos[i] = this.elementos[i+1];
-            }
-            this.elementos[tamanho] = null;
-            this.tamanho--;
-        } else {
-            throw new Exception("Posição inválida");
-        }
     }
 
 
