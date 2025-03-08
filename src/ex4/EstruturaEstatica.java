@@ -9,29 +9,22 @@ public class EstruturaEstatica <T> {
     
     @SuppressWarnings("unchecked")
     public EstruturaEstatica(int capacidade) {
-        
         this.elementos = (T[]) new Object [capacidade];
         this.tamanho = 0;
-        
     }
     
     public EstruturaEstatica () {
-
         this (10);
-
     }
 
     public boolean adiciona ( T elemento) {
-
         this.aumentaCapacidade();
         if(this.tamanho < this.elementos.length) {
             this.elementos[this.tamanho] = elemento;
             this.tamanho++;
             return true;
         }
-
         return false;
-        
     }
 
     public boolean adiciona (int posicao, T elemento) {
@@ -87,11 +80,9 @@ public class EstruturaEstatica <T> {
     }
 
     public void remove (int posicao) {
-
         if(!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição Inválida");
         }
-
     }
 
 }

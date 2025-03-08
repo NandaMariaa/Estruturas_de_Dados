@@ -6,15 +6,26 @@ public class Teste {
 
          Pilha <Integer> pilha = new Pilha <Integer> ();
 
-         for (int i = 1; i <= 10; i++) {
+            //for (int i = 1; i <= 10; i++) {
+            //pilha.empilha(i);
 
-            pilha.empilha(i);
+            System.out.println(pilha.topo());
 
-         }
+            System.out.println(pilha);
 
-         System.out.println(pilha);
-         System.out.println("Tamanho da Pilha: " + pilha.tamanho());
+            pilha.empilha(1);
+            pilha.empilha(2);
+            pilha.empilha(3);
 
-    }
-    
+            System.out.println(pilha.topo());
+
+            System.out.println(pilha);
+
+            pilha.desempilha();
+            System.out.println(pilha);
+
+           
+
+        }
 }
+    
