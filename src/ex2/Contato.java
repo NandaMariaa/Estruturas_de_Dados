@@ -1,3 +1,5 @@
+package ex2;
+
 public class Contato {
 
     private String nome;

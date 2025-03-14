@@ -41,6 +41,10 @@ public class Teste {
         } else {
             System.out.println("primeira posição: " + fila.espiar());
         }
+
+        System.out.println(fila.desenfileira());
+        
+        System.out.println(fila.toString());
     }
 }
     

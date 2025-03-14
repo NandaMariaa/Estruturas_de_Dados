@@ -1,4 +1,5 @@
-import java.util.Arrays;
+package ex2;
+//import java.util.Arrays;
 
 public class VetorObjeto {
 
