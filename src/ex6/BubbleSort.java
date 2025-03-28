@@ -16,7 +16,6 @@ public class BubbleSort {
 
             // exibindo os valores do vetor;
             System.out.println(vetor[i]);
-
         }
 
         // metodo de ordenacao bubblesort;
