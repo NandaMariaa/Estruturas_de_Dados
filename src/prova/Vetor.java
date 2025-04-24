@@ -98,28 +98,28 @@ public class Vetor {
     }
 
     public void aumentaCapacidade () {
-        if (this.tamanho == this.elementos.length) {
-            String [] elementosNovos = new String[this.elementos.length * 2];
+        if (this.tamanho == this.elementos.length) { // Se tamanho for igual ao comprimento de elementos, o array está cheio.
+            String [] elementosNovos = new String[this.elementos.length * 2]; // Cria um novo array (elementosNovos) com o dobro do tamanho do atual.
             for (int i = 0; i < this.elementos.length; i++) {
                 elementosNovos[i] = this.elementos[i];
-            }
-            this.elementos = elementosNovos;
+            } // Copia os elementos existentes para o novo array.
+            this.elementos = elementosNovos; // Substitui o array interno pelo novo array (elementos = elementosNovos).
         }
     }
 
     public void adiciona1 (String elemento) throws Exception {
-        this.aumentaCapacidade();
-        this.elementos[this.tamanho] = elemento;
-        this.tamanho++;
+        this.aumentaCapacidade(); // Garante que há espaço suficiente chamando aumentaCapacidade().
+        this.elementos[this.tamanho] = elemento; //Coloca o elemento na próxima posição disponível do array (elementos[tamanho]).
+        this.tamanho++; // Atualiza o tamanho da lista
     }
 
     public void remove (int posicao) throws Exception {
-        if (posicao >=0 && posicao <tamanho) {
-            for (int i = posicao; i < this.tamanho-1; i++) {
+        if (posicao >=0 && posicao <tamanho) { // Verifica se a posição está dentro dos limites válidos (entre 0 e tamanho - 1)
+            for (int i = posicao; i < this.tamanho-1; i++) { // Move todos os elementos após a posição removida uma casa para trás, sobrescrevendo o elemento na posição.
                 this.elementos[i] = this.elementos[i+1];
             }
-            this.elementos[tamanho] = null;
-            this.tamanho--;
+            this.elementos[tamanho] = null; // Define a última posição como null para evitar referências desnecessárias.
+            this.tamanho--; // Atualiza o tamanho da lista.
         } else {
             throw new Exception("Posição inválida");
         }
