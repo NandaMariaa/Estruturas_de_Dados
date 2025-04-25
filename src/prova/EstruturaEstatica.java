@@ -1,4 +1,4 @@
-package ex4;
+package prova;
 
 public class EstruturaEstatica <T> {
 
@@ -94,4 +94,3 @@ public class EstruturaEstatica <T> {
     }
 
 }
-    

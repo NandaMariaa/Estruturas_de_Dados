@@ -1,4 +1,4 @@
-package ex4;
+package prova;
 
 public class Teste {
 
@@ -24,5 +24,5 @@ public class Teste {
         
         System.out.println(fila.toString());
     }
-}
     
+}

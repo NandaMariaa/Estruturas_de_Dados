@@ -1,4 +1,4 @@
-package ex4;
+package prova;
 
 public class Pilha <T> extends EstruturaEstatica <T> {
 

@@ -1,4 +1,5 @@
-package ex4;
+package prova;
+
 public class Fila <T> extends EstruturaEstatica <T>{
 
     public Fila () {
@@ -34,6 +35,5 @@ public class Fila <T> extends EstruturaEstatica <T>{
         return elementoASerRemovido; //retorna o que foi tirado.
         
     }
-
 
 }

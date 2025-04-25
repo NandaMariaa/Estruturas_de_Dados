@@ -22,6 +22,9 @@ public class TesteVetor {
 
         System.out.println("a qnt de elementos no velor é de: " + vetor.tamanho());
         System.out.println("dados do vetor: " + vetor.toString());
+
+        System.out.println (vetor.busca(1));
+    
         //System.out.println("informação na posição: " + vetor.busca(2));
         //System.out.println("informação na posição: " + vetor.busca1("Elemento 5"));
 
